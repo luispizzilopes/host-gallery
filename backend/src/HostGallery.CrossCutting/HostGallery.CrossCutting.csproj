@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HostGallery.Application\HostGallery.Application.csproj" />
+    <ProjectReference Include="..\HostGallery.Domain\HostGallery.Domain.csproj" />
+    <ProjectReference Include="..\HostGallery.Infrastructure\HostGallery.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,11 @@
+C:\Users\PC\Desktop\Sistema LR Manutenção\backend\ApiHostGallery\HostGallery.Domain\bin\Debug\net8.0\HostGallery.Domain.deps.json
+C:\Users\PC\Desktop\Sistema LR Manutenção\backend\ApiHostGallery\HostGallery.Domain\bin\Debug\net8.0\HostGallery.Domain.dll
+C:\Users\PC\Desktop\Sistema LR Manutenção\backend\ApiHostGallery\HostGallery.Domain\bin\Debug\net8.0\HostGallery.Domain.pdb
+C:\Users\PC\Desktop\Sistema LR Manutenção\backend\ApiHostGallery\HostGallery.Domain\obj\Debug\net8.0\HostGallery.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Desktop\Sistema LR Manutenção\backend\ApiHostGallery\HostGallery.Domain\obj\Debug\net8.0\HostGallery.Domain.AssemblyInfoInputs.cache
+C:\Users\PC\Desktop\Sistema LR Manutenção\backend\ApiHostGallery\HostGallery.Domain\obj\Debug\net8.0\HostGallery.Domain.AssemblyInfo.cs
+C:\Users\PC\Desktop\Sistema LR Manutenção\backend\ApiHostGallery\HostGallery.Domain\obj\Debug\net8.0\HostGallery.Domain.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Sistema LR Manutenção\backend\ApiHostGallery\HostGallery.Domain\obj\Debug\net8.0\HostGallery.Domain.dll
+C:\Users\PC\Desktop\Sistema LR Manutenção\backend\ApiHostGallery\HostGallery.Domain\obj\Debug\net8.0\refint\HostGallery.Domain.dll
+C:\Users\PC\Desktop\Sistema LR Manutenção\backend\ApiHostGallery\HostGallery.Domain\obj\Debug\net8.0\HostGallery.Domain.pdb
+C:\Users\PC\Desktop\Sistema LR Manutenção\backend\ApiHostGallery\HostGallery.Domain\obj\Debug\net8.0\ref\HostGallery.Domain.dll

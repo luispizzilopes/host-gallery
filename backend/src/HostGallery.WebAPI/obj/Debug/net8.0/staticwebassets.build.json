@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "6OfUGtd6Xhe78JzUFTvp9csejMcLIqSerQ/3KgZB63A=",
+  "Source": "HostGallery.WebAPI",
+  "BasePath": "_content/HostGallery.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
