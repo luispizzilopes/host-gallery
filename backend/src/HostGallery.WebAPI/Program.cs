@@ -1,4 +1,5 @@
 using HostGallery.CrossCutting.IoC;
+using HostGallery.WebAPI.Middlewares;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,6 +29,8 @@ app.UseHttpsRedirection();
 app.UseAuthentication(); 
 
 app.UseAuthorization();
+
+app.UseMiddleware(typeof(ErrorMiddleware)); 
 
 app.MapControllers();
 

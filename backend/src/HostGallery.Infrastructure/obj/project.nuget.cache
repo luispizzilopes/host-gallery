@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AMRu3QGlYlh0be/Q2nbRwk3we2eS6yCJzKMcsFGu4ajnCJChQWa/+jWc44AhImXX6uduPXr1WaslAzpRPhlqmg==",
+  "dgSpecHash": "KcsK0fq542Qn8t/8n3N3m7KkAqjYc8H6f3Rd3DjkLAKhgZ6ZVB6vV5DUBReNfgQIinmo/7oyPAqzcZFPkaXyUA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

@@ -10,4 +10,5 @@ public class Usuario : IdentityUser
 
     public ICollection<Categoria>? Categorias { get; set; }
     public ICollection<Item>? Itens { get; set; }
+    public ICollection<Evento>? Eventos { get; set; }
 }

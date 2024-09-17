@@ -15,8 +15,21 @@ public class AutenticacaoController : ControllerBase
         _autenticacaoService = autenticacaoService;
     }
 
+    [HttpPost("login")]
+    public async Task<ActionResult> Login([FromBody] LoginDTO login)
+    {
+        var resposta = await _autenticacaoService.Login(login);
+
+        if (resposta is not null)
+        {
+            return Ok(resposta);
+        }
+
+        return Unauthorized();
+    }
+
     [HttpPost("adicionar-conta")]
-    public async Task<ActionResult> Teste([FromBody] CadastroUsuarioDTO cadastroUsuario)
+    public async Task<ActionResult> CadastroUsuario([FromBody] CadastroUsuarioDTO cadastroUsuario)
     {
         var resposta = await _autenticacaoService.CadastroUsuario(cadastroUsuario);
 

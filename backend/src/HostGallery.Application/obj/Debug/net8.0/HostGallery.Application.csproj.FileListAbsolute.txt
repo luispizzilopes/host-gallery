@@ -13,3 +13,19 @@ C:\Users\PC\Desktop\Sistema LR Manutenção\backend\ApiHostGallery\HostGallery.A
 C:\Users\PC\Desktop\Sistema LR Manutenção\backend\ApiHostGallery\HostGallery.Application\obj\Debug\net8.0\refint\HostGallery.Application.dll
 C:\Users\PC\Desktop\Sistema LR Manutenção\backend\ApiHostGallery\HostGallery.Application\obj\Debug\net8.0\HostGallery.Application.pdb
 C:\Users\PC\Desktop\Sistema LR Manutenção\backend\ApiHostGallery\HostGallery.Application\obj\Debug\net8.0\ref\HostGallery.Application.dll
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\bin\Debug\net8.0\HostGallery.Application.deps.json
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\bin\Debug\net8.0\HostGallery.Application.dll
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\bin\Debug\net8.0\HostGallery.Application.pdb
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\bin\Debug\net8.0\HostGallery.Domain.dll
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\bin\Debug\net8.0\HostGallery.Domain.pdb
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\obj\Debug\net8.0\HostGallery.Application.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\obj\Debug\net8.0\HostGallery.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\obj\Debug\net8.0\HostGallery.Application.AssemblyInfoInputs.cache
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\obj\Debug\net8.0\HostGallery.Application.AssemblyInfo.cs
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\obj\Debug\net8.0\HostGallery.Application.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\obj\Debug\net8.0\HostGallery.Application.sourcelink.json
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\obj\Debug\net8.0\HostGall.F8546659.Up2Date
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\obj\Debug\net8.0\HostGallery.Application.dll
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\obj\Debug\net8.0\refint\HostGallery.Application.dll
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\obj\Debug\net8.0\HostGallery.Application.pdb
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\obj\Debug\net8.0\ref\HostGallery.Application.dll

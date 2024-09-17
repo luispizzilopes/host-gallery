@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.WebAPI\\HostGallery.WebAPI.csproj": {}
+    "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\HostGallery.WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Application\\HostGallery.Application.csproj": {
+    "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Application\\HostGallery.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Application\\HostGallery.Application.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Application\\HostGallery.Application.csproj",
         "projectName": "HostGallery.Application",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Application\\HostGallery.Application.csproj",
+        "projectPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Application\\HostGallery.Application.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Application\\obj\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Domain\\HostGallery.Domain.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Domain\\HostGallery.Domain.csproj"
+              "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Domain\\HostGallery.Domain.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Domain\\HostGallery.Domain.csproj"
               }
             }
           }
@@ -74,14 +74,14 @@
         }
       }
     },
-    "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.CrossCutting\\HostGallery.CrossCutting.csproj": {
+    "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.CrossCutting\\HostGallery.CrossCutting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.CrossCutting\\HostGallery.CrossCutting.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.CrossCutting\\HostGallery.CrossCutting.csproj",
         "projectName": "HostGallery.CrossCutting",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.CrossCutting\\HostGallery.CrossCutting.csproj",
+        "projectPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.CrossCutting\\HostGallery.CrossCutting.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.CrossCutting\\obj\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.CrossCutting\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -98,14 +98,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Application\\HostGallery.Application.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Application\\HostGallery.Application.csproj"
+              "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Application\\HostGallery.Application.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Application\\HostGallery.Application.csproj"
               },
-              "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Domain\\HostGallery.Domain.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Domain\\HostGallery.Domain.csproj"
+              "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Domain\\HostGallery.Domain.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Domain\\HostGallery.Domain.csproj"
               },
-              "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj"
+              "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj"
               }
             }
           }
@@ -144,14 +144,14 @@
         }
       }
     },
-    "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Domain\\HostGallery.Domain.csproj": {
+    "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Domain\\HostGallery.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Domain\\HostGallery.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Domain\\HostGallery.Domain.csproj",
         "projectName": "HostGallery.Domain",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Domain\\HostGallery.Domain.csproj",
+        "projectPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Domain\\HostGallery.Domain.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Domain\\obj\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -204,14 +204,14 @@
         }
       }
     },
-    "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj": {
+    "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj",
         "projectName": "HostGallery.Infrastructure",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -228,8 +228,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Domain\\HostGallery.Domain.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Domain\\HostGallery.Domain.csproj"
+              "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Domain\\HostGallery.Domain.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Domain\\HostGallery.Domain.csproj"
               }
             }
           }
@@ -306,14 +306,14 @@
         }
       }
     },
-    "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.WebAPI\\HostGallery.WebAPI.csproj": {
+    "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\HostGallery.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.WebAPI\\HostGallery.WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\HostGallery.WebAPI.csproj",
         "projectName": "HostGallery.WebAPI",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.WebAPI\\HostGallery.WebAPI.csproj",
+        "projectPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\HostGallery.WebAPI.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.WebAPI\\obj\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -330,8 +330,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.CrossCutting\\HostGallery.CrossCutting.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.CrossCutting\\HostGallery.CrossCutting.csproj"
+              "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.CrossCutting\\HostGallery.CrossCutting.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.CrossCutting\\HostGallery.CrossCutting.csproj"
               }
             }
           }
@@ -356,6 +356,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.8, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

@@ -22,6 +22,21 @@ namespace HostGallery.Infrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("EventosUsuarios", b =>
+                {
+                    b.Property<int>("EventoId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("UsuarioId")
+                        .HasColumnType("text");
+
+                    b.HasKey("EventoId", "UsuarioId");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("EventosUsuarios");
+                });
+
             modelBuilder.Entity("HostGallery.Domain.Entities.Categoria", b =>
                 {
                     b.Property<int>("Id")
@@ -39,6 +54,9 @@ namespace HostGallery.Infrastructure.Migrations
                     b.Property<string>("Descricao")
                         .HasMaxLength(1000)
                         .HasColumnType("character varying(1000)");
+
+                    b.Property<int?>("EventoId")
+                        .HasColumnType("integer");
 
                     b.Property<string>("IpAtualizacao")
                         .HasColumnType("text");
@@ -60,9 +78,58 @@ namespace HostGallery.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("EventoId");
+
                     b.HasIndex("UsuarioId");
 
                     b.ToTable("Categorias");
+                });
+
+            modelBuilder.Entity("HostGallery.Domain.Entities.Evento", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<Guid>("CodigoConvite")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTimeOffset?>("DataAtualizacao")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTimeOffset?>("DataCriacao")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTimeOffset?>("DataFim")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTimeOffset?>("DataInicio")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("IpAtualizacao")
+                        .HasColumnType("text");
+
+                    b.Property<string>("IpCriacao")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("UsuarioId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string[]>("Usuarios")
+                        .HasColumnType("text[]");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("Evento");
                 });
 
             modelBuilder.Entity("HostGallery.Domain.Entities.Item", b =>
@@ -319,10 +386,38 @@ namespace HostGallery.Infrastructure.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("EventosUsuarios", b =>
+                {
+                    b.HasOne("HostGallery.Domain.Entities.Evento", null)
+                        .WithMany()
+                        .HasForeignKey("EventoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HostGallery.Infrastructure.Identity.Entities.Usuario", null)
+                        .WithMany()
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("HostGallery.Domain.Entities.Categoria", b =>
                 {
+                    b.HasOne("HostGallery.Domain.Entities.Evento", null)
+                        .WithMany("Categorias")
+                        .HasForeignKey("EventoId");
+
                     b.HasOne("HostGallery.Infrastructure.Identity.Entities.Usuario", null)
                         .WithMany("Categorias")
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("HostGallery.Domain.Entities.Evento", b =>
+                {
+                    b.HasOne("HostGallery.Infrastructure.Identity.Entities.Usuario", null)
+                        .WithMany("Eventos")
                         .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -401,9 +496,16 @@ namespace HostGallery.Infrastructure.Migrations
                     b.Navigation("Itens");
                 });
 
+            modelBuilder.Entity("HostGallery.Domain.Entities.Evento", b =>
+                {
+                    b.Navigation("Categorias");
+                });
+
             modelBuilder.Entity("HostGallery.Infrastructure.Identity.Entities.Usuario", b =>
                 {
                     b.Navigation("Categorias");
+
+                    b.Navigation("Eventos");
 
                     b.Navigation("Itens");
                 });

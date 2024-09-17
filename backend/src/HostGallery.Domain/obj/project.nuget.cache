@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P9h37nyHPVO5fj31W9HFji6CbcrwOWW6MDHiUeOw4R9Ve4KAT5BHAbNKqGyM08KDHhTZoeqcnIY2bhfKrMxmiw==",
+  "dgSpecHash": "mOZFblMcF9SkirGK7Pq6Ow4H4yDthZP52lZVcGqc1YUnEG/1mkRgwNB8HYSK3wu9Iq8WJlYoBUV90KE1imNVUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\PC\\Desktop\\Sistema LR Manutenção\\backend\\ApiHostGallery\\HostGallery.Domain\\HostGallery.Domain.csproj",
+  "projectFilePath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Domain\\HostGallery.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
