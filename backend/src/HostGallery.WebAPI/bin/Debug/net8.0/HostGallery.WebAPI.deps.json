@@ -888,7 +888,8 @@
       "HostGallery.Application/1.0.0": {
         "dependencies": {
           "AutoMapper": "13.0.1",
-          "HostGallery.Domain": "1.0.0"
+          "HostGallery.Domain": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0"
         },
         "runtime": {
           "HostGallery.Application.dll": {}

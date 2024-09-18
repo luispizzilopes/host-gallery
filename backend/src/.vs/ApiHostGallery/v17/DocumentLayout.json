@@ -1,36 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{B9DC6482-DFC3-47E1-B0BE-9375D8483CD9}|HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj|c:\\users\\pc\\desktop\\hostgallery\\backend\\src\\hostgallery.infrastructure\\entitiesconfiguration\\eventoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9DC6482-DFC3-47E1-B0BE-9375D8483CD9}|HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj|solutionrelative:hostgallery.infrastructure\\entitiesconfiguration\\eventoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3651E16C-9703-4325-93F4-03AE37675351}|HostGallery.Domain\\HostGallery.Domain.csproj|c:\\users\\pc\\desktop\\hostgallery\\backend\\src\\hostgallery.domain\\entities\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3651E16C-9703-4325-93F4-03AE37675351}|HostGallery.Domain\\HostGallery.Domain.csproj|solutionrelative:hostgallery.domain\\entities\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3651E16C-9703-4325-93F4-03AE37675351}|HostGallery.Domain\\HostGallery.Domain.csproj|c:\\users\\pc\\desktop\\hostgallery\\backend\\src\\hostgallery.domain\\entities\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3651E16C-9703-4325-93F4-03AE37675351}|HostGallery.Domain\\HostGallery.Domain.csproj|solutionrelative:hostgallery.domain\\entities\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9DC6482-DFC3-47E1-B0BE-9375D8483CD9}|HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj|c:\\users\\pc\\desktop\\hostgallery\\backend\\src\\hostgallery.infrastructure\\entitiesconfiguration\\usuarioconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9DC6482-DFC3-47E1-B0BE-9375D8483CD9}|HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj|solutionrelative:hostgallery.infrastructure\\entitiesconfiguration\\usuarioconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9DC6482-DFC3-47E1-B0BE-9375D8483CD9}|HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj|c:\\users\\pc\\desktop\\hostgallery\\backend\\src\\hostgallery.infrastructure\\identity\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9DC6482-DFC3-47E1-B0BE-9375D8483CD9}|HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj|solutionrelative:hostgallery.infrastructure\\identity\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9DC6482-DFC3-47E1-B0BE-9375D8483CD9}|HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj|c:\\users\\pc\\desktop\\hostgallery\\backend\\src\\hostgallery.infrastructure\\entitiesconfiguration\\categoriaconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9DC6482-DFC3-47E1-B0BE-9375D8483CD9}|HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj|solutionrelative:hostgallery.infrastructure\\entitiesconfiguration\\categoriaconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{068FC313-C8EF-4FB9-AB53-AA6373EADF16}|HostGallery.Application\\HostGallery.Application.csproj|c:\\users\\pc\\desktop\\hostgallery\\backend\\src\\hostgallery.application\\services\\categoriaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{068FC313-C8EF-4FB9-AB53-AA6373EADF16}|HostGallery.Application\\HostGallery.Application.csproj|solutionrelative:hostgallery.application\\services\\categoriaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -38,102 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EventoConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\EntitiesConfiguration\\EventoConfiguration.cs",
-              "RelativeDocumentMoniker": "HostGallery.Infrastructure\\EntitiesConfiguration\\EventoConfiguration.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\EntitiesConfiguration\\EventoConfiguration.cs",
-              "RelativeToolTip": "HostGallery.Infrastructure\\EntitiesConfiguration\\EventoConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T00:34:12.623Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UsuarioConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\EntitiesConfiguration\\UsuarioConfiguration.cs",
-              "RelativeDocumentMoniker": "HostGallery.Infrastructure\\EntitiesConfiguration\\UsuarioConfiguration.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\EntitiesConfiguration\\UsuarioConfiguration.cs",
-              "RelativeToolTip": "HostGallery.Infrastructure\\EntitiesConfiguration\\UsuarioConfiguration.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAywBMAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T00:19:05.153Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CategoriaConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\EntitiesConfiguration\\CategoriaConfiguration.cs",
-              "RelativeDocumentMoniker": "HostGallery.Infrastructure\\EntitiesConfiguration\\CategoriaConfiguration.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\EntitiesConfiguration\\CategoriaConfiguration.cs",
-              "RelativeToolTip": "HostGallery.Infrastructure\\EntitiesConfiguration\\CategoriaConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwgAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T00:15:50.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\Identity\\Entities\\Usuario.cs",
-              "RelativeDocumentMoniker": "HostGallery.Infrastructure\\Identity\\Entities\\Usuario.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\Identity\\Entities\\Usuario.cs",
-              "RelativeToolTip": "HostGallery.Infrastructure\\Identity\\Entities\\Usuario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T00:10:44.896Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Evento.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Domain\\Entities\\Evento.cs",
-              "RelativeDocumentMoniker": "HostGallery.Domain\\Entities\\Evento.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Domain\\Entities\\Evento.cs",
-              "RelativeToolTip": "HostGallery.Domain\\Entities\\Evento.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T00:05:33.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Categoria.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Domain\\Entities\\Categoria.cs",
-              "RelativeDocumentMoniker": "HostGallery.Domain\\Entities\\Categoria.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Domain\\Entities\\Categoria.cs",
-              "RelativeToolTip": "HostGallery.Domain\\Entities\\Categoria.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvw0AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T00:05:54.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CategoriaService.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Application\\Services\\CategoriaService.cs",
-              "RelativeDocumentMoniker": "HostGallery.Application\\Services\\CategoriaService.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Application\\Services\\CategoriaService.cs",
-              "RelativeToolTip": "HostGallery.Application\\Services\\CategoriaService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T00:04:15.114Z",
-              "EditorCaption": ""
             }
           ]
         }

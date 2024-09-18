@@ -1,6 +1,8 @@
-﻿namespace HostGallery.Application.Dtos.Categoria; 
+﻿using HostGallery.Application.Dtos.Common;
 
-public class CategoriaDTO
+namespace HostGallery.Application.Dtos.Categoria; 
+
+public class CategoriaDTO : EntidadeBaseDTO
 {
     public string Nome { get; set; } = null!;
     public string? Descricao { get; set; }

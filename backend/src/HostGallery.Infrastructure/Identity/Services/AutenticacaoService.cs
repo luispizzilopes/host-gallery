@@ -32,7 +32,7 @@ namespace HostGallery.Infrastructure.Identity.Services
         {
             var usuario = new Usuario
             {
-                UserName = cadastroUsuario.Email,
+                UserName = cadastroUsuario.Apelido,
                 Email = cadastroUsuario.Email,
                 PrimeiroNome = cadastroUsuario.PrimeiroNome,
                 UltimoNome = cadastroUsuario.UltimoNome,

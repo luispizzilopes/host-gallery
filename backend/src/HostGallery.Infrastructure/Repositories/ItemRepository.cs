@@ -24,7 +24,9 @@ public class ItemRepository : IItemRepository
 
     public async Task<IEnumerable<Item>> BuscarItens()
     {
-        return await _context.Itens.ToListAsync();
+        return await _context.Itens
+            .AsNoTracking()
+            .ToListAsync();
     }
 
 

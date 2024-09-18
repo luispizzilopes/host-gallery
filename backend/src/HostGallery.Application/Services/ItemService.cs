@@ -3,6 +3,7 @@ using HostGallery.Application.Dtos.Item;
 using HostGallery.Application.Interfaces;
 using HostGallery.Domain.Entities;
 using HostGallery.Domain.Interfaces;
+using Microsoft.AspNetCore.Http;
 
 namespace HostGallery.Application.Services;
 
@@ -10,11 +11,13 @@ public class ItemService : IItemService
 {
     private readonly IItemRepository _repositoryItem;
     private readonly IMapper _mapper;
+    private readonly IHttpContextAccessor _httpContextAccessor;
 
-    public ItemService(IItemRepository repositoryItem, IMapper mapper)
+    public ItemService(IItemRepository repositoryItem, IMapper mapper, IHttpContextAccessor httpContextAccessor)
     {
         _repositoryItem = repositoryItem;
         _mapper = mapper;
+        _httpContextAccessor = httpContextAccessor;
     }
 
     public async Task<ItemDTO> BuscarItem(int id)
@@ -35,12 +38,18 @@ public class ItemService : IItemService
     {
         var entidade = _mapper.Map<Item>(item);
 
+        entidade.IpCriacao = _httpContextAccessor.HttpContext.Request.Headers["IpCliente"].FirstOrDefault();
+        entidade.DataCriacao = DateTimeOffset.Now;
+
         return _mapper.Map<ItemDTO>(await _repositoryItem.AdicionarItem(entidade));
     }
 
     public async Task<ItemDTO> AtualizarItem(ItemDTO item)
     {
         var entidade = _mapper.Map<Item>(item);
+
+        entidade.IpAtualizacao = _httpContextAccessor.HttpContext.Request.Headers["IpCliente"].FirstOrDefault();
+        entidade.DataAtualizacao = DateTimeOffset.Now;
 
         return _mapper.Map<ItemDTO>(await _repositoryItem.AtualizarItem(entidade));
     }

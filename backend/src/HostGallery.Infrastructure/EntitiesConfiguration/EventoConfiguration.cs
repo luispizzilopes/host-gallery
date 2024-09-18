@@ -9,6 +9,8 @@ namespace HostGallery.Infrastructure.EntitiesConfiguration
     {
         public void Configure(EntityTypeBuilder<Evento> builder)
         {
+            builder.Ignore(e => e.Usuarios); 
+
             builder.HasMany<Usuario>()
              .WithMany()
              .UsingEntity<Dictionary<string, object>>(

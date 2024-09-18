@@ -1,6 +1,8 @@
-﻿namespace HostGallery.Application.Dtos.Item; 
+﻿using HostGallery.Application.Dtos.Common;
 
-public class ItemDTO
+namespace HostGallery.Application.Dtos.Item; 
+
+public class ItemDTO : EntidadeBaseDTO
 {
     public string Nome { get; set; } = null!;
     public string? Descricao { get; set; }

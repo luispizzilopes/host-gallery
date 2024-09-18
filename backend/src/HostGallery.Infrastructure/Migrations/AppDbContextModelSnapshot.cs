@@ -122,14 +122,11 @@ namespace HostGallery.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string[]>("Usuarios")
-                        .HasColumnType("text[]");
-
                     b.HasKey("Id");
 
                     b.HasIndex("UsuarioId");
 
-                    b.ToTable("Evento");
+                    b.ToTable("Eventos");
                 });
 
             modelBuilder.Entity("HostGallery.Domain.Entities.Item", b =>
@@ -199,6 +196,9 @@ namespace HostGallery.Infrastructure.Migrations
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("boolean");
+
+                    b.Property<string>("FotoPerfil")
+                        .HasColumnType("text");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("boolean");

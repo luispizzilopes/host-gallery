@@ -24,7 +24,9 @@ public class CategoriaRepository : ICategoriaRepository
 
     public async Task<IEnumerable<Categoria>> BuscarCategorias()
     {
-        return await _context.Categorias.ToListAsync(); 
+        return await _context.Categorias
+            .AsNoTracking()
+            .ToListAsync(); 
     }
 
 

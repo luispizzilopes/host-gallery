@@ -21,6 +21,8 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddDependencyInjectionAPI(this IServiceCollection services, IConfiguration configuration)
     {
+        services.AddHttpContextAccessor(); 
+
         services.AddDbContext<AppDbContext>(options =>
         {
             options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"));
@@ -32,10 +34,13 @@ public static class DependencyInjection
 
         services.AddScoped<ICategoriaRepository, CategoriaRepository>(); 
         services.AddScoped<IItemRepository, ItemRepository>();
+        services.AddScoped<IEventoRepository, EventoRepository>(); 
 
         services.AddScoped<ICategoriaService, CategoriaService>(); 
         services.AddScoped<IItemService, ItemService>();
-        services.AddScoped<IAutenticacaoService, AutenticacaoService>(); 
+        services.AddScoped<IEventoService, EventoService>(); 
+        services.AddScoped<IAutenticacaoService, AutenticacaoService>();
+        services.AddScoped<IUsuarioService, UsuarioService>(); 
 
         /*
          JWT - Adiciona o manipulador de autenticação e define o 
