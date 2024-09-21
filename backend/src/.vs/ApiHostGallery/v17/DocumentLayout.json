@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{068FC313-C8EF-4FB9-AB53-AA6373EADF16}|HostGallery.Application\\HostGallery.Application.csproj|c:\\users\\pc\\desktop\\hostgallery\\backend\\src\\hostgallery.application\\services\\categoriaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{068FC313-C8EF-4FB9-AB53-AA6373EADF16}|HostGallery.Application\\HostGallery.Application.csproj|solutionrelative:hostgallery.application\\services\\categoriaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CategoriaService.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Application\\Services\\CategoriaService.cs",
+              "RelativeDocumentMoniker": "HostGallery.Application\\Services\\CategoriaService.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Application\\Services\\CategoriaService.cs",
+              "RelativeToolTip": "HostGallery.Application\\Services\\CategoriaService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T17:33:03.867Z",
+              "EditorCaption": ""
             }
           ]
         }
