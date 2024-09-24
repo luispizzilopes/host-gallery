@@ -12,9 +12,11 @@ import { toast } from "sonner"
 
 import ApiPicsum from "@/services/api-picsum";
 import backgroundLogin from "../../assets/background-login.jpg";
+import DialogRedefinirSenha from "./components/DialogRedefinirSenha";
 
 export default function Login() {
     const [imagem, setImagem] = useState<string | null>(null);
+    const [abrirDialogRedefinicaoSenha, setAbrirDialogRedefinicaoSenha] = useState<boolean>(false);
 
     const carregarImagemBackground = async () => {
         try {
@@ -53,9 +55,9 @@ export default function Login() {
                         <div className="grid gap-2">
                             <div className="flex items-center">
                                 <Label htmlFor="password">Senha</Label>
-                                <Link href="/forgot-password" className="ml-auto inline-block text-sm underline">
+                                <p onClick={() => setAbrirDialogRedefinicaoSenha(true)} className="ml-auto inline-block text-sm underline cursor-pointer">
                                     Esqueceu sua senha?
-                                </Link>
+                                </p>
                             </div>
                             <Input id="password" type="password" required />
                         </div>
@@ -84,6 +86,10 @@ export default function Login() {
                 }
             </div>
 
+            <DialogRedefinirSenha
+                open={abrirDialogRedefinicaoSenha}
+                setOpen={setAbrirDialogRedefinicaoSenha}
+            />
         </div>
     );
 }

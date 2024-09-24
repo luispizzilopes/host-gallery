@@ -4,7 +4,7 @@ namespace HostGallery.Infrastructure.Identity.Dtos
 {
     public class LoginDTO
     {
-        [EmailAddress]
+        //[EmailAddress]
         public string Email { get; set; } = null!;
 
         [DataType(DataType.Password)]

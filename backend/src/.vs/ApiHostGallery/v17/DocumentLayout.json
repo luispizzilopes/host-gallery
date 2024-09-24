@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B9DC6482-DFC3-47E1-B0BE-9375D8483CD9}|HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj|c:\\users\\pc\\desktop\\hostgallery\\backend\\src\\hostgallery.infrastructure\\identity\\services\\autenticacaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9DC6482-DFC3-47E1-B0BE-9375D8483CD9}|HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj|solutionrelative:hostgallery.infrastructure\\identity\\services\\autenticacaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C50F2B9-4AB6-4892-85F9-647090387429}|HostGallery.WebAPI\\HostGallery.WebAPI.csproj|c:\\users\\pc\\desktop\\hostgallery\\backend\\src\\hostgallery.webapi\\controllers\\autenticacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C50F2B9-4AB6-4892-85F9-647090387429}|HostGallery.WebAPI\\HostGallery.WebAPI.csproj|solutionrelative:hostgallery.webapi\\controllers\\autenticacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C50F2B9-4AB6-4892-85F9-647090387429}|HostGallery.WebAPI\\HostGallery.WebAPI.csproj|c:\\users\\pc\\desktop\\hostgallery\\backend\\src\\hostgallery.webapi\\middlewares\\errormiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C50F2B9-4AB6-4892-85F9-647090387429}|HostGallery.WebAPI\\HostGallery.WebAPI.csproj|solutionrelative:hostgallery.webapi\\middlewares\\errormiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9DC6482-DFC3-47E1-B0BE-9375D8483CD9}|HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj|c:\\users\\pc\\desktop\\hostgallery\\backend\\src\\hostgallery.infrastructure\\identity\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9DC6482-DFC3-47E1-B0BE-9375D8483CD9}|HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj|solutionrelative:hostgallery.infrastructure\\identity\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03F4568D-0415-4111-80BB-B01362783906}|HostGallery.CrossCutting\\HostGallery.CrossCutting.csproj|c:\\users\\pc\\desktop\\hostgallery\\backend\\src\\hostgallery.crosscutting\\ioc\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03F4568D-0415-4111-80BB-B01362783906}|HostGallery.CrossCutting\\HostGallery.CrossCutting.csproj|solutionrelative:hostgallery.crosscutting\\ioc\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9DC6482-DFC3-47E1-B0BE-9375D8483CD9}|HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj|c:\\users\\pc\\desktop\\hostgallery\\backend\\src\\hostgallery.infrastructure\\identity\\intefaces\\iautenticacaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9DC6482-DFC3-47E1-B0BE-9375D8483CD9}|HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj|solutionrelative:hostgallery.infrastructure\\identity\\intefaces\\iautenticacaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C50F2B9-4AB6-4892-85F9-647090387429}|HostGallery.WebAPI\\HostGallery.WebAPI.csproj|c:\\users\\pc\\desktop\\hostgallery\\backend\\src\\hostgallery.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C50F2B9-4AB6-4892-85F9-647090387429}|HostGallery.WebAPI\\HostGallery.WebAPI.csproj|solutionrelative:hostgallery.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9DC6482-DFC3-47E1-B0BE-9375D8483CD9}|HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj|c:\\users\\pc\\desktop\\hostgallery\\backend\\src\\hostgallery.infrastructure\\identity\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9DC6482-DFC3-47E1-B0BE-9375D8483CD9}|HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj|solutionrelative:hostgallery.infrastructure\\identity\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{068FC313-C8EF-4FB9-AB53-AA6373EADF16}|HostGallery.Application\\HostGallery.Application.csproj|c:\\users\\pc\\desktop\\hostgallery\\backend\\src\\hostgallery.application\\services\\categoriaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{068FC313-C8EF-4FB9-AB53-AA6373EADF16}|HostGallery.Application\\HostGallery.Application.csproj|solutionrelative:hostgallery.application\\services\\categoriaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,7 +54,110 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\Identity\\Dtos\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "HostGallery.Infrastructure\\Identity\\Dtos\\LoginDTO.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\Identity\\Dtos\\LoginDTO.cs",
+              "RelativeToolTip": "HostGallery.Infrastructure\\Identity\\Dtos\\LoginDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwYAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T11:44:57.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.CrossCutting\\IoC\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "HostGallery.CrossCutting\\IoC\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.CrossCutting\\IoC\\DependencyInjection.cs",
+              "RelativeToolTip": "HostGallery.CrossCutting\\IoC\\DependencyInjection.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwCAAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T11:34:53.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "HostGallery.WebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\Program.cs",
+              "RelativeToolTip": "HostGallery.WebAPI\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T11:34:45.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ErrorMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\Middlewares\\ErrorMiddleware.cs",
+              "RelativeDocumentMoniker": "HostGallery.WebAPI\\Middlewares\\ErrorMiddleware.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\Middlewares\\ErrorMiddleware.cs",
+              "RelativeToolTip": "HostGallery.WebAPI\\Middlewares\\ErrorMiddleware.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAiwBQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T11:27:39.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IAutenticacaoService.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\Identity\\Intefaces\\IAutenticacaoService.cs",
+              "RelativeDocumentMoniker": "HostGallery.Infrastructure\\Identity\\Intefaces\\IAutenticacaoService.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\Identity\\Intefaces\\IAutenticacaoService.cs",
+              "RelativeToolTip": "HostGallery.Infrastructure\\Identity\\Intefaces\\IAutenticacaoService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T12:12:35.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AutenticacaoController.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\Controllers\\AutenticacaoController.cs",
+              "RelativeDocumentMoniker": "HostGallery.WebAPI\\Controllers\\AutenticacaoController.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\Controllers\\AutenticacaoController.cs",
+              "RelativeToolTip": "HostGallery.WebAPI\\Controllers\\AutenticacaoController.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwBsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T12:06:33.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AutenticacaoService.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\Identity\\Services\\AutenticacaoService.cs",
+              "RelativeDocumentMoniker": "HostGallery.Infrastructure\\Identity\\Services\\AutenticacaoService.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\Identity\\Services\\AutenticacaoService.cs",
+              "RelativeToolTip": "HostGallery.Infrastructure\\Identity\\Services\\AutenticacaoService.cs",
+              "ViewState": "AQIAAKEAAAAAAAAAAAAcwJcAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T21:10:48.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\Identity\\Services\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "HostGallery.Infrastructure\\Identity\\Services\\UsuarioService.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\Identity\\Services\\UsuarioService.cs",
+              "RelativeToolTip": "HostGallery.Infrastructure\\Identity\\Services\\UsuarioService.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T21:10:34.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "CategoriaService.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Application\\Services\\CategoriaService.cs",
               "RelativeDocumentMoniker": "HostGallery.Application\\Services\\CategoriaService.cs",
@@ -30,8 +165,7 @@
               "RelativeToolTip": "HostGallery.Application\\Services\\CategoriaService.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T17:33:03.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-21T17:33:03.867Z"
             }
           ]
         }

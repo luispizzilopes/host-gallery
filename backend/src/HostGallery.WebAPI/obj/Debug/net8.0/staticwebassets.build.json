@@ -1,11 +1,77 @@
 {
   "Version": 1,
-  "Hash": "6OfUGtd6Xhe78JzUFTvp9csejMcLIqSerQ/3KgZB63A=",
+  "Hash": "rs6LFPNejEXlNudH50pPLOsXR1cIufDOr6aND8jSFCo=",
   "Source": "HostGallery.WebAPI",
   "BasePath": "_content/HostGallery.WebAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "HostGallery.WebAPI\\wwwroot",
+      "Source": "HostGallery.WebAPI",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\wwwroot\\",
+      "BasePath": "_content/HostGallery.WebAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\wwwroot\\Templates\\TemplateConfirmacaoEmail.html",
+      "SourceId": "HostGallery.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\wwwroot\\",
+      "BasePath": "_content/HostGallery.WebAPI",
+      "RelativePath": "Templates/TemplateConfirmacaoEmail.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Templates\\TemplateConfirmacaoEmail.html"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\wwwroot\\Templates\\TemplateConfirmacaoEmailErro.html",
+      "SourceId": "HostGallery.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\wwwroot\\",
+      "BasePath": "_content/HostGallery.WebAPI",
+      "RelativePath": "Templates/TemplateConfirmacaoEmailErro.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Templates\\TemplateConfirmacaoEmailErro.html"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\wwwroot\\Templates\\TemplateEmailConfirmado.html",
+      "SourceId": "HostGallery.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\wwwroot\\",
+      "BasePath": "_content/HostGallery.WebAPI",
+      "RelativePath": "Templates/TemplateEmailConfirmado.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Templates\\TemplateEmailConfirmado.html"
+    }
+  ]
 }

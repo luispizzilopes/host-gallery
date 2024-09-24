@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\wwwroot\\Templates\\TemplateConfirmacaoEmail.html",
+      "PackagePath": "staticwebassets\\Templates\\TemplateConfirmacaoEmail.html"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\wwwroot\\Templates\\TemplateConfirmacaoEmailErro.html",
+      "PackagePath": "staticwebassets\\Templates\\TemplateConfirmacaoEmailErro.html"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.WebAPI\\wwwroot\\Templates\\TemplateEmailConfirmado.html",
+      "PackagePath": "staticwebassets\\Templates\\TemplateEmailConfirmado.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HostGallery.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.HostGallery.WebAPI.props",
+      "PackagePath": "build\\HostGallery.WebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.HostGallery.WebAPI.props",
+      "PackagePath": "buildMultiTargeting\\HostGallery.WebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.HostGallery.WebAPI.props",
+      "PackagePath": "buildTransitive\\HostGallery.WebAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,5 +1,8 @@
-import Link from "next/link"
+"use client"
 
+import Link from "next/link"
+import { ChevronLeftIcon } from "@radix-ui/react-icons"
+import { useRouter } from 'next/navigation'
 import { Button } from "@/components/ui/button"
 import {
     Card,
@@ -12,9 +15,16 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
 export default function AdicionarConta() {
+    const router = useRouter();
+
     return (
         <div className="flex items-center justify-center min-h-screen bg-muted">
-          <Card className="mx-auto max-w-md">
+            <div className="fixed left-2 top-2">
+                <Button variant="outline" size="icon" onClick={() => router.push("/login")}>
+                    <ChevronLeftIcon className="h-4 w-4" />
+                </Button>
+            </div>
+            <Card className="mx-auto max-w-md">
                 <CardHeader>
                     <CardTitle className="text-xl">Cadastre-se</CardTitle>
                     <CardDescription>

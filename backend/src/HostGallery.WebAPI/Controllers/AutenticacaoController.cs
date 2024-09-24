@@ -40,4 +40,12 @@ public class AutenticacaoController : ControllerBase
 
         return BadRequest(resposta); 
     }
+
+    [HttpGet("confirmar-email")]
+    public async Task<ContentResult> ConfirmarEmail([FromQuery] string userId, [FromQuery] string token)
+    {
+        var resposta = await _autenticacaoService.ConfirmarEmail(userId, token);
+
+        return resposta; 
+    }
 }

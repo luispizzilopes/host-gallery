@@ -1,6 +1,8 @@
-﻿namespace HostGallery.Infrastructure.Identity.Exceptions; 
+﻿using HostGallery.Domain.Exceptions;
 
-public class CredenciaisInvalidasException : Exception
+namespace HostGallery.Infrastructure.Identity.Exceptions; 
+
+public class CredenciaisInvalidasException : BaseException
 {
     public CredenciaisInvalidasException() : base("As credenciais fornecidas são inválidas.") { }
 }
