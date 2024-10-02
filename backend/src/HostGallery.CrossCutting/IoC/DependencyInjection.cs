@@ -28,7 +28,10 @@ public static class DependencyInjection
             options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"));
         });
 
-        services.AddIdentity<Usuario, IdentityRole>()
+        services.AddIdentity<Usuario, IdentityRole>(options =>
+        {
+            options.SignIn.RequireConfirmedEmail = true; 
+        })
             .AddEntityFrameworkStores<AppDbContext>()
             .AddDefaultTokenProviders(); 
 

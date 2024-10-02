@@ -146,6 +146,7 @@ namespace HostGallery.Infrastructure.Identity.Services
                 login.Email = usuario.UserName!; 
             }
         }
+
         private bool EmailValido(string email)
         {
             string padrao = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";

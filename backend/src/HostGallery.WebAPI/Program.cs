@@ -43,7 +43,9 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles; 
-}); 
+});
+
+builder.Services.AddCors();
 
 var app = builder.Build();
 
@@ -54,6 +56,16 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(c =>
+{
+    c.AllowAnyHeader();
+    c.AllowAnyMethod();
+    c.WithOrigins("http://localhost:3000")
+     .AllowCredentials(); 
+});
+
+app.UseRouting(); 
 
 app.UseAuthentication(); 
 

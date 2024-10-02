@@ -13,33 +13,78 @@ import { toast } from "sonner"
 import ApiPicsum from "@/services/api-picsum";
 import backgroundLogin from "../../assets/background-login.jpg";
 import DialogRedefinirSenha from "./components/DialogRedefinirSenha";
+import { LoginInterface } from "@/interfaces/LoginInterface";
+import apiHostGallery from "@/services/apiHostGallery";
+import { toastSistema } from "@/utils/toastSistema";
+import ComponenteLoadingSpinner from "@/components/ComponenteLoadingSpinner";
 
 export default function Login() {
+    const [carregandoRequisicao, setCarregandoRequisicao] = useState<boolean>(false);
+    const [informacoesLogin, setInformacoesLogin] = useState<LoginInterface>({
+        email: "",
+        senha: "",
+    });
+
     const [imagem, setImagem] = useState<string | null>(null);
     const [abrirDialogRedefinicaoSenha, setAbrirDialogRedefinicaoSenha] = useState<boolean>(false);
 
-    const carregarImagemBackground = async () => {
+    const carregarImagemBackground = async (): Promise<void> => {
         try {
             const resposta = await ApiPicsum.get("/1920/1080", { responseType: "blob" });
             const blob = URL.createObjectURL(resposta.data);
             setImagem(blob);
         } catch (error: Error | any) {
-            setTimeout(() => {
-                toast("Ocorreu um erro.", {
-                    description: error.message,
-                })
+            toastSistema({
+                cabecalho: "Ocorreu um erro.",
+                descricao: error.message,
             });
         }
     };
+
+    const realizarAutenticacao = async (): Promise<void> => {
+        console.log("teste")
+        setCarregandoRequisicao(true);
+
+        try {
+            const resposta = await apiHostGallery
+                .post("/Autenticacao/login", informacoesLogin);
+
+            if (resposta.status === 200) {
+                toastSistema({
+                    cabecalho: "Acessando o sistema",
+                    descricao: "...",
+                });
+            }
+        } catch (error: Error | any) {
+            let errors = error.response.data.Errors;
+
+            if (errors.length > 0) {
+
+                for (error of errors) {
+                    toastSistema({
+                        cabecalho: "Ocorreu um erro.",
+                        descricao: error.Message,
+                    });
+                }
+            } else {
+                toastSistema({
+                    cabecalho: "Ocorreu um erro.",
+                    descricao: error.message,
+                });
+            }
+        }
+
+        setCarregandoRequisicao(false);
+    }
 
     useEffect(() => {
         carregarImagemBackground();
     }, []);
 
     return (
-        <div className="w-full lg:grid lg:min-h-[600px] lg:grid-cols-2 xl:min-h-[800px]">
-            <div className="flex items-center justify-center py-12">
-                <div className="mx-auto grid w-[400px] gap-6">
+        <div className="flex h-screen">
+            <div className="flex items-center justify-center py-12 h-full w-full md:w-1/2 m-4 sm:m-0">
+            <div className="mx-auto grid w-[95%] md:w-[65%] gap-6">
                     <div className="grid gap-2 text-center">
                         <h1 className="text-3xl font-bold">Host Gallery</h1>
                         <p className="italic text-balance text-muted-foreground text-[14px] mb-2">
@@ -50,7 +95,14 @@ export default function Login() {
                     <div className="grid gap-4">
                         <div className="grid gap-2">
                             <Label htmlFor="email">Email</Label>
-                            <Input id="email" type="email" placeholder="exemplo@gmail.com" required />
+                            <Input
+                                id="email"
+                                type="email"
+                                placeholder="exemplo@gmail.com"
+                                required
+                                value={informacoesLogin.email}
+                                onChange={(e) => setInformacoesLogin({ ...informacoesLogin, email: e.target.value })}
+                            />
                         </div>
                         <div className="grid gap-2">
                             <div className="flex items-center">
@@ -59,9 +111,15 @@ export default function Login() {
                                     Esqueceu sua senha?
                                 </p>
                             </div>
-                            <Input id="password" type="password" required />
+                            <Input
+                                id="password"
+                                type="password"
+                                required
+                                value={informacoesLogin.senha}
+                                onChange={(e) => setInformacoesLogin({ ...informacoesLogin, senha: e.target.value })}
+                            />
                         </div>
-                        <Button type="submit" className="w-full">Realizar Login</Button>
+                        <Button type="submit" className="w-full" onClick={() => realizarAutenticacao()}>Realizar Login</Button>
                     </div>
                     <div className="mt-4 text-center text-sm">
                         Não possui uma conta?{" "}
@@ -69,7 +127,8 @@ export default function Login() {
                     </div>
                 </div>
             </div>
-            <div className="hidden bg-muted lg:flex items-center justify-center h-full">
+
+            <div className="hidden bg-muted lg:flex items-center justify-center h-full w-1/2">
                 {
                     imagem != null ?
                         <Image
@@ -90,6 +149,9 @@ export default function Login() {
                 open={abrirDialogRedefinicaoSenha}
                 setOpen={setAbrirDialogRedefinicaoSenha}
             />
+
+            {carregandoRequisicao && <ComponenteLoadingSpinner />}
         </div>
     );
+
 }

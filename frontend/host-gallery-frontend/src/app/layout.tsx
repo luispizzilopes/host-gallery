@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="ptbr">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <LoadingProvider>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
             {children}
           </ThemeProvider>
         </LoadingProvider>
