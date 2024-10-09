@@ -22,11 +22,14 @@ public class EventoRepository : IEventoRepository
         ?? throw new KeyNotFoundException($"Evento com ID {id} não encontrada.");
     }
 
-    public async Task<IEnumerable<Evento>> BuscarEventos()
+    public async Task<IEnumerable<Evento>> BuscarEventosUsuario(string usuarioId)
     {
-        return await _context.Eventos
-            .AsNoTracking()
-            .ToListAsync(); 
+        return await (from t0 in _context.Eventos
+                      join t1 in _context.EventosUsuarios on t0.Id equals t1.EventoId
+                      where t1.UsuarioId == usuarioId
+                      select t0)
+                        .AsNoTracking()
+                        .ToListAsync(); 
     }
 
     public async Task<Evento> AdicionarEvento(Evento evento)

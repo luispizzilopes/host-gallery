@@ -5,6 +5,7 @@ namespace HostGallery.Domain.Entities;
 public class Evento : EntidadeBase
 {
     public string Nome { get; set; } = null!; 
+    public byte[]? Capa { get; set; } 
     public Guid CodigoConvite { get; set; }
     public DateTimeOffset? DataInicio { get; set; }
     public DateTimeOffset? DataFim { get; set; }

@@ -4,7 +4,7 @@ using HostGallery.Application.Interfaces;
 using HostGallery.Domain.Entities;
 using HostGallery.Domain.Interfaces;
 using Microsoft.AspNetCore.Http;
-using System.Xml.Serialization;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace HostGallery.Application.Services; 
 
@@ -30,7 +30,11 @@ public class EventoService : IEventoService
 
     public async Task<IEnumerable<EventoDTO>> BuscarEventos()
     {
-        var entidades = await _repositoryEvento.BuscarEventos();
+        var usuarioId = _httpContextAccessor.HttpContext.User.FindFirst(JwtRegisteredClaimNames.NameId)?.Value; 
+
+        if(usuarioId == null) return Enumerable.Empty<EventoDTO>();
+
+        var entidades = await _repositoryEvento.BuscarEventosUsuario(usuarioId);
 
         return _mapper.Map<IEnumerable<EventoDTO>>(entidades); 
     }

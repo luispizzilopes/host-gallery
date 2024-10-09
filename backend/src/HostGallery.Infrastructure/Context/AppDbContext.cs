@@ -14,6 +14,7 @@ public class AppDbContext : IdentityDbContext<Usuario>
     public virtual DbSet<Categoria> Categorias { get; set; }
     public virtual DbSet<Item> Itens { get; set; }
     public virtual DbSet<Evento> Eventos { get; set; }
+    public virtual DbSet<EventoUsuario> EventosUsuarios { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

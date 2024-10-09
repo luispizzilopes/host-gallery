@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HostGallery.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b09e4fc9df169b513f793b502b0509b99e088401")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d34960c6fe340596f298462df4b264a611b77522")]
 [assembly: System.Reflection.AssemblyProductAttribute("HostGallery.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HostGallery.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -259,3 +259,4 @@ C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.WebAPI\obj\Debug\net8.0\
 C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.WebAPI\obj\Debug\net8.0\ref\HostGallery.WebAPI.dll
 C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.WebAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.WebAPI\bin\Debug\net8.0\HostGallery.WebAPI.staticwebassets.runtime.json
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.WebAPI\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll

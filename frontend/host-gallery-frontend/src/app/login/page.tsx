@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { LoadingSpinner } from "@/components/LoadingSpinner";
-import { toast } from "sonner"
 
 import ApiPicsum from "@/services/api-picsum";
 import backgroundLogin from "../../assets/background-login.jpg";
@@ -17,8 +16,10 @@ import { LoginInterface } from "@/interfaces/LoginInterface";
 import apiHostGallery from "@/services/apiHostGallery";
 import { toastSistema } from "@/utils/toastSistema";
 import ComponenteLoadingSpinner from "@/components/ComponenteLoadingSpinner";
+import { useRouter } from 'next/navigation'
 
 export default function Login() {
+    const router = useRouter(); 
     const [carregandoRequisicao, setCarregandoRequisicao] = useState<boolean>(false);
     const [informacoesLogin, setInformacoesLogin] = useState<LoginInterface>({
         email: "",
@@ -42,7 +43,6 @@ export default function Login() {
     };
 
     const realizarAutenticacao = async (): Promise<void> => {
-        console.log("teste")
         setCarregandoRequisicao(true);
 
         try {
@@ -50,10 +50,7 @@ export default function Login() {
                 .post("/Autenticacao/login", informacoesLogin);
 
             if (resposta.status === 200) {
-                toastSistema({
-                    cabecalho: "Acessando o sistema",
-                    descricao: "...",
-                });
+                router.push("/home"); 
             }
         } catch (error: Error | any) {
             let errors = error.response.data.Errors;
