@@ -1,10 +1,11 @@
-﻿using HostGallery.Domain.Entities;
+﻿using HostGallery.Domain.Common;
+using HostGallery.Domain.Entities;
 
 namespace HostGallery.Domain.Interfaces; 
 
 public interface ICategoriaRepository
 {
-    Task<IEnumerable<Categoria>> BuscarCategorias();
+    Task<ResultadoPaginado<Categoria>> BuscarCategorias(ParametrosPaginacao parametros);
     Task<Categoria> BuscarCategoria(int id);
     Task<Categoria> AdicionarCategoria(Categoria categoria);
     Task<Categoria> AtualizarCategoria(Categoria categoria);

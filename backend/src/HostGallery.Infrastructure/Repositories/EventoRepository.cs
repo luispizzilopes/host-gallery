@@ -1,6 +1,8 @@
-﻿using HostGallery.Domain.Entities;
+﻿using HostGallery.Domain.Common;
+using HostGallery.Domain.Entities;
 using HostGallery.Domain.Interfaces;
 using HostGallery.Infrastructure.Context;
+using HostGallery.Infrastructure.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace HostGallery.Infrastructure.Repositories;
@@ -22,14 +24,14 @@ public class EventoRepository : IEventoRepository
         ?? throw new KeyNotFoundException($"Evento com ID {id} não encontrada.");
     }
 
-    public async Task<IEnumerable<Evento>> BuscarEventosUsuario(string usuarioId)
+    public async Task<ResultadoPaginado<Evento>> BuscarEventosUsuario(string usuarioId, ParametrosPaginacao parametrosPaginacao)
     {
         return await (from t0 in _context.Eventos
                       join t1 in _context.EventosUsuarios on t0.Id equals t1.EventoId
-                      where t1.UsuarioId == usuarioId
-                      select t0)
+                      where t1.UsuarioId == usuarioId select t0)
                         .AsNoTracking()
-                        .ToListAsync(); 
+                        .AsQueryable()
+                        .PaginarAsync(parametrosPaginacao); 
     }
 
     public async Task<Evento> AdicionarEvento(Evento evento)

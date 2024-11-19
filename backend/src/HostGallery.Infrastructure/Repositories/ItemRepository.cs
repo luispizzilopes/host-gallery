@@ -1,6 +1,8 @@
-﻿using HostGallery.Domain.Entities;
+﻿using HostGallery.Domain.Common;
+using HostGallery.Domain.Entities;
 using HostGallery.Domain.Interfaces;
 using HostGallery.Infrastructure.Context;
+using HostGallery.Infrastructure.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace HostGallery.Infrastructure.Repositories;
@@ -22,11 +24,12 @@ public class ItemRepository : IItemRepository
         ?? throw new KeyNotFoundException($"Item com ID {id} não encontrada.");
     }
 
-    public async Task<IEnumerable<Item>> BuscarItens()
+    public async Task<ResultadoPaginado<Item>> BuscarItens(ParametrosPaginacao parametrosPaginacao)
     {
         return await _context.Itens
             .AsNoTracking()
-            .ToListAsync();
+            .AsQueryable()
+            .PaginarAsync(parametrosPaginacao);
     }
 
 

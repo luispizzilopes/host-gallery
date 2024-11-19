@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using HostGallery.Application.Dtos.Categoria;
 using HostGallery.Application.Interfaces;
+using HostGallery.Application.Utils;
+using HostGallery.Domain.Common;
 using HostGallery.Domain.Entities;
 using HostGallery.Domain.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -27,11 +29,12 @@ public class CategoriaService : ICategoriaService
         return _mapper.Map<CategoriaDTO>(entidade); 
     }
 
-    public async Task<IEnumerable<CategoriaDTO>> BuscarCategorias()
+    public async Task<ResultadoPaginado<CategoriaDTO>> BuscarCategorias(ParametrosPaginacao parametrosPaginacao)
     {
-        var entidades = await _repositoryCategoria.BuscarCategorias();
+        var resultadoPaginado = await _repositoryCategoria.BuscarCategorias(parametrosPaginacao);
+        var resultadoPaginadoDto = ConverterResultadoPaginadoParaDataTransferObject<Categoria, CategoriaDTO>.ConverterResultado(resultadoPaginado, _mapper);
 
-        return _mapper.Map<IEnumerable<CategoriaDTO>>(entidades); 
+        return resultadoPaginadoDto; 
     }
 
     public async Task<CategoriaDTO> AdicionarCategoria(CategoriaDTO categoria)

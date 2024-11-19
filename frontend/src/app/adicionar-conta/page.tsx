@@ -21,8 +21,6 @@ export default function AdicionarConta() {
     const router = useRouter();
     const [informacoesNovaConta, setInformacoesNovaConta] = useState<CadastroInterface | null>(null);
 
-
-
     return (
         <div className="flex items-center justify-center min-h-screen bg-muted">
             <div className="fixed left-2 top-2">

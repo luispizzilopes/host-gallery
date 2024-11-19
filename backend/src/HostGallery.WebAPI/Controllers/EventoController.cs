@@ -1,5 +1,6 @@
 ﻿using HostGallery.Application.Dtos.Evento;
 using HostGallery.Application.Interfaces;
+using HostGallery.Domain.Common;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -27,9 +28,9 @@ namespace HostGallery.WebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<EventoDTO>>> BuscarEvento()
+        public async Task<ActionResult<ResultadoPaginado<EventoDTO>>> BuscarEvento([FromQuery] ParametrosPaginacao parametrosPaginacao)
         {
-            var resposta = await _eventoService.BuscarEventos();
+            var resposta = await _eventoService.BuscarEventos(parametrosPaginacao);
             return Ok(resposta);
         }
 

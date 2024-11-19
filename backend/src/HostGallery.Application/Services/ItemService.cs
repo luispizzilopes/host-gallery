@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using HostGallery.Application.Dtos.Item;
 using HostGallery.Application.Interfaces;
+using HostGallery.Application.Utils;
+using HostGallery.Domain.Common;
 using HostGallery.Domain.Entities;
 using HostGallery.Domain.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -27,18 +29,19 @@ public class ItemService : IItemService
         return _mapper.Map<ItemDTO>(entidade);
     }
 
-    public async Task<IEnumerable<ItemDTO>> BuscarItens()
+    public async Task<ResultadoPaginado<ItemDTO>> BuscarItens(ParametrosPaginacao parametrosPaginacao)
     {
-        var entidades = await _repositoryItem.BuscarItens();
+        var resultadoPaginado = await _repositoryItem.BuscarItens(parametrosPaginacao);
+        var resultadoPaginadoDto = ConverterResultadoPaginadoParaDataTransferObject<Item, ItemDTO>.ConverterResultado(resultadoPaginado, _mapper); 
 
-        return _mapper.Map<IEnumerable<ItemDTO>>(entidades);
+        return resultadoPaginadoDto;
     }
 
     public async Task<ItemDTO> AdicionarItem(ItemDTO item)
     {
         var entidade = _mapper.Map<Item>(item);
 
-        entidade.IpCriacao = _httpContextAccessor.HttpContext.Request.Headers["IpCliente"].FirstOrDefault();
+        entidade.IpCriacao = _httpContextAccessor.HttpContext?.Request.Headers["IpCliente"].FirstOrDefault();
         entidade.DataCriacao = DateTimeOffset.Now;
 
         return _mapper.Map<ItemDTO>(await _repositoryItem.AdicionarItem(entidade));
@@ -48,7 +51,7 @@ public class ItemService : IItemService
     {
         var entidade = _mapper.Map<Item>(item);
 
-        entidade.IpAtualizacao = _httpContextAccessor.HttpContext.Request.Headers["IpCliente"].FirstOrDefault();
+        entidade.IpAtualizacao = _httpContextAccessor.HttpContext?.Request.Headers["IpCliente"].FirstOrDefault();
         entidade.DataAtualizacao = DateTimeOffset.Now;
 
         return _mapper.Map<ItemDTO>(await _repositoryItem.AtualizarItem(entidade));

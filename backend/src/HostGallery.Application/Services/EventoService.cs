@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using HostGallery.Application.Dtos.Evento;
 using HostGallery.Application.Interfaces;
+using HostGallery.Application.Utils;
+using HostGallery.Domain.Common;
 using HostGallery.Domain.Entities;
 using HostGallery.Domain.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -28,22 +30,22 @@ public class EventoService : IEventoService
         return _mapper.Map<EventoDTO>(entidade); 
     }
 
-    public async Task<IEnumerable<EventoDTO>> BuscarEventos()
+    public async Task<ResultadoPaginado<EventoDTO>> BuscarEventos(ParametrosPaginacao parametrosPaginacao)
     {
-        var usuarioId = _httpContextAccessor.HttpContext.User.FindFirst(JwtRegisteredClaimNames.NameId)?.Value; 
+        var usuarioId = _httpContextAccessor.HttpContext?.User.FindFirst(JwtRegisteredClaimNames.NameId)?.Value;
+        if (usuarioId == null) return new ResultadoPaginado<EventoDTO>();
 
-        if(usuarioId == null) return Enumerable.Empty<EventoDTO>();
+        var paginacaoResultado = await _repositoryEvento.BuscarEventosUsuario(usuarioId, parametrosPaginacao);
+        var paginacaoResultadoDto = ConverterResultadoPaginadoParaDataTransferObject<Evento, EventoDTO>.ConverterResultado(paginacaoResultado, _mapper);
 
-        var entidades = await _repositoryEvento.BuscarEventosUsuario(usuarioId);
-
-        return _mapper.Map<IEnumerable<EventoDTO>>(entidades); 
+        return paginacaoResultadoDto; 
     }
 
     public async Task<EventoDTO> AdicionarEvento(EventoDTO evento)
     {
         var entidade = _mapper.Map<Evento>(evento);
 
-        entidade.IpCriacao = _httpContextAccessor.HttpContext.Request.Headers["IpCliente"].FirstOrDefault();
+        entidade.IpCriacao = _httpContextAccessor.HttpContext?.Request.Headers["IpCliente"].FirstOrDefault();
         entidade.DataCriacao = DateTimeOffset.UtcNow;
         entidade.CodigoConvite = Guid.NewGuid();
 
@@ -54,7 +56,7 @@ public class EventoService : IEventoService
     {
         var entidade = _mapper.Map<Evento>(evento);
 
-        entidade.IpAtualizacao = _httpContextAccessor.HttpContext.Request.Headers["IpCliente"].FirstOrDefault();
+        entidade.IpAtualizacao = _httpContextAccessor.HttpContext?.Request.Headers["IpCliente"].FirstOrDefault();
         entidade.DataAtualizacao = DateTimeOffset.UtcNow;
 
         return _mapper.Map<EventoDTO>(await _repositoryEvento.AtualizarEvento(entidade));

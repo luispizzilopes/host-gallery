@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HostGallery.WebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93c17500af1b837cc6a102b3ae3714f9fad883fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+baadcacd76f4edb314ea9a956739fd38584f8df1")]
 [assembly: System.Reflection.AssemblyProductAttribute("HostGallery.WebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HostGallery.WebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

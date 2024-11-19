@@ -1,5 +1,6 @@
 ﻿using HostGallery.Application.Dtos.Item;
 using HostGallery.Application.Interfaces;
+using HostGallery.Domain.Common;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -26,9 +27,9 @@ namespace HostGallery.WebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ItemDTO>>> BuscarItem()
+        public async Task<ActionResult<ResultadoPaginado<ItemDTO>>> BuscarItem([FromQuery] ParametrosPaginacao parametrosPaginacao)
         {
-            var resposta = await _ItemService.BuscarItens();
+            var resposta = await _ItemService.BuscarItens(parametrosPaginacao);
             return Ok(resposta);
         }
 

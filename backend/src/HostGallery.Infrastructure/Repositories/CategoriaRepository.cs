@@ -1,6 +1,8 @@
-﻿using HostGallery.Domain.Entities;
+﻿using HostGallery.Domain.Common;
+using HostGallery.Domain.Entities;
 using HostGallery.Domain.Interfaces;
 using HostGallery.Infrastructure.Context;
+using HostGallery.Infrastructure.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace HostGallery.Infrastructure.Repositories;
@@ -22,13 +24,13 @@ public class CategoriaRepository : ICategoriaRepository
         ?? throw new KeyNotFoundException($"Categoria com ID {id} não encontrada.");
     }
 
-    public async Task<IEnumerable<Categoria>> BuscarCategorias()
+    public async Task<ResultadoPaginado<Categoria>> BuscarCategorias(ParametrosPaginacao parametrosPaginacao)
     {
         return await _context.Categorias
             .AsNoTracking()
-            .ToListAsync(); 
+            .AsQueryable()
+            .PaginarAsync(parametrosPaginacao); 
     }
-
 
     public async Task<Categoria> AdicionarCategoria(Categoria categoria)
     {

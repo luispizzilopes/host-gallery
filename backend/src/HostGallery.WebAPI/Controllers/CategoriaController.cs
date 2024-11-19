@@ -1,5 +1,6 @@
 ﻿using HostGallery.Application.Dtos.Categoria;
 using HostGallery.Application.Interfaces;
+using HostGallery.Domain.Common;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -27,9 +28,9 @@ namespace HostGallery.WebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<CategoriaDTO>>> BuscarCategoria()
+        public async Task<ActionResult<ResultadoPaginado<CategoriaDTO>>> BuscarCategoria([FromQuery] ParametrosPaginacao parametrosPaginacao)
         {
-            var resposta = await _CategoriaService.BuscarCategorias();
+            var resposta = await _CategoriaService.BuscarCategorias(parametrosPaginacao);
             return Ok(resposta);
         }
 
