@@ -30,6 +30,9 @@
             "projectReferences": {
               "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Domain\\HostGallery.Domain.csproj": {
                 "projectPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Domain\\HostGallery.Domain.csproj"
+              },
+              "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\HostGallery\\backend\\src\\HostGallery.Infrastructure\\HostGallery.Infrastructure.csproj"
               }
             }
           }
@@ -192,6 +195,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

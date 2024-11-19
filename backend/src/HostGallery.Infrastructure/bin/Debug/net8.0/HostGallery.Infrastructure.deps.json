@@ -830,6 +830,10 @@
       },
       "System.Threading.Channels/6.0.0": {},
       "HostGallery.Domain/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity": "2.2.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.8"
+        },
         "runtime": {
           "HostGallery.Domain.dll": {}
         }

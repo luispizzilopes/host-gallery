@@ -1,9 +1,10 @@
-﻿using HostGallery.Application.Interfaces;
+﻿using HostGallery.Application.Identity.Intefaces;
+using HostGallery.Application.Interfaces;
 using HostGallery.Application.Mappings;
 using HostGallery.Application.Services;
+using HostGallery.Domain.Entities;
 using HostGallery.Domain.Interfaces;
 using HostGallery.Infrastructure.Context;
-using HostGallery.Infrastructure.Identity.Entities;
 using HostGallery.Infrastructure.Identity.Intefaces;
 using HostGallery.Infrastructure.Identity.Services;
 using HostGallery.Infrastructure.Repositories;

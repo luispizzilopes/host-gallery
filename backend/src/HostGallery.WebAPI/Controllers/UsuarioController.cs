@@ -1,4 +1,4 @@
-﻿using HostGallery.Infrastructure.Identity.Dtos;
+﻿using HostGallery.Application.Identity.Dtos;
 using HostGallery.Infrastructure.Identity.Intefaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

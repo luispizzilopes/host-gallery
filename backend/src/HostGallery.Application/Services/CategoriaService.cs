@@ -38,7 +38,7 @@ public class CategoriaService : ICategoriaService
     {
         var entidade = _mapper.Map<Categoria>(categoria);
 
-        entidade.IpCriacao = _httpContextAccessor.HttpContext.Request.Headers["IpCliente"].FirstOrDefault();
+        entidade.IpCriacao = _httpContextAccessor.HttpContext?.Request.Headers["IpCliente"].FirstOrDefault();
         entidade.DataCriacao = DateTimeOffset.Now;
 
         return _mapper.Map<CategoriaDTO>(await _repositoryCategoria.AdicionarCategoria(entidade)); 
@@ -48,7 +48,7 @@ public class CategoriaService : ICategoriaService
     {
         var entidade = _mapper.Map<Categoria>(categoria);
 
-        entidade.IpAtualizacao = _httpContextAccessor.HttpContext.Request.Headers["IpCliente"].FirstOrDefault();
+        entidade.IpAtualizacao = _httpContextAccessor.HttpContext?.Request.Headers["IpCliente"].FirstOrDefault();
         entidade.DataAtualizacao = DateTimeOffset.Now;
 
         return _mapper.Map<CategoriaDTO>(await _repositoryCategoria.AtualizarCategoria(entidade));

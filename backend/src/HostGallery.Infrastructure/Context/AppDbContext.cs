@@ -1,5 +1,4 @@
 ﻿using HostGallery.Domain.Entities;
-using HostGallery.Infrastructure.Identity.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

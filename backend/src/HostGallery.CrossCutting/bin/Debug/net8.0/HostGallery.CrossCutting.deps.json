@@ -471,6 +471,7 @@
         "dependencies": {
           "AutoMapper": "13.0.1",
           "HostGallery.Domain": "1.0.0",
+          "HostGallery.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "System.IdentityModel.Tokens.Jwt": "8.1.2"
         },
@@ -479,6 +480,10 @@
         }
       },
       "HostGallery.Domain/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity": "2.2.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.8"
+        },
         "runtime": {
           "HostGallery.Domain.dll": {}
         }

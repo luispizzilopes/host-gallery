@@ -22,21 +22,6 @@ namespace HostGallery.Infrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("EventosUsuarios", b =>
-                {
-                    b.Property<int>("EventoId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("UsuarioId")
-                        .HasColumnType("text");
-
-                    b.HasKey("EventoId", "UsuarioId");
-
-                    b.HasIndex("UsuarioId");
-
-                    b.ToTable("EventosUsuarios");
-                });
-
             modelBuilder.Entity("HostGallery.Domain.Entities.Categoria", b =>
                 {
                     b.Property<int>("Id")
@@ -93,6 +78,9 @@ namespace HostGallery.Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<byte[]>("Capa")
+                        .HasColumnType("bytea");
+
                     b.Property<Guid>("CodigoConvite")
                         .HasColumnType("uuid");
 
@@ -124,9 +112,37 @@ namespace HostGallery.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UsuarioId");
-
                     b.ToTable("Eventos");
+                });
+
+            modelBuilder.Entity("HostGallery.Domain.Entities.EventoUsuario", b =>
+                {
+                    b.Property<string>("UsuarioId")
+                        .HasColumnType("text");
+
+                    b.Property<int>("EventoId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTimeOffset?>("DataAtualizacao")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTimeOffset?>("DataCriacao")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("IpAtualizacao")
+                        .HasColumnType("text");
+
+                    b.Property<string>("IpCriacao")
+                        .HasColumnType("text");
+
+                    b.HasKey("UsuarioId", "EventoId");
+
+                    b.HasIndex("EventoId");
+
+                    b.ToTable("EventosUsuarios");
                 });
 
             modelBuilder.Entity("HostGallery.Domain.Entities.Item", b =>
@@ -178,7 +194,7 @@ namespace HostGallery.Infrastructure.Migrations
                     b.ToTable("Itens");
                 });
 
-            modelBuilder.Entity("HostGallery.Infrastructure.Identity.Entities.Usuario", b =>
+            modelBuilder.Entity("HostGallery.Domain.Entities.Usuario", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("text");
@@ -386,41 +402,36 @@ namespace HostGallery.Infrastructure.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("EventosUsuarios", b =>
-                {
-                    b.HasOne("HostGallery.Domain.Entities.Evento", null)
-                        .WithMany()
-                        .HasForeignKey("EventoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("HostGallery.Infrastructure.Identity.Entities.Usuario", null)
-                        .WithMany()
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("HostGallery.Domain.Entities.Categoria", b =>
                 {
                     b.HasOne("HostGallery.Domain.Entities.Evento", null)
                         .WithMany("Categorias")
                         .HasForeignKey("EventoId");
 
-                    b.HasOne("HostGallery.Infrastructure.Identity.Entities.Usuario", null)
+                    b.HasOne("HostGallery.Domain.Entities.Usuario", null)
                         .WithMany("Categorias")
                         .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("HostGallery.Domain.Entities.Evento", b =>
+            modelBuilder.Entity("HostGallery.Domain.Entities.EventoUsuario", b =>
                 {
-                    b.HasOne("HostGallery.Infrastructure.Identity.Entities.Usuario", null)
-                        .WithMany("Eventos")
+                    b.HasOne("HostGallery.Domain.Entities.Evento", "Evento")
+                        .WithMany("EventosUsuarios")
+                        .HasForeignKey("EventoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HostGallery.Domain.Entities.Usuario", "Usuario")
+                        .WithMany("EventosUsuarios")
                         .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Evento");
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("HostGallery.Domain.Entities.Item", b =>
@@ -431,7 +442,7 @@ namespace HostGallery.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("HostGallery.Infrastructure.Identity.Entities.Usuario", null)
+                    b.HasOne("HostGallery.Domain.Entities.Usuario", null)
                         .WithMany("Itens")
                         .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -451,7 +462,7 @@ namespace HostGallery.Infrastructure.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("HostGallery.Infrastructure.Identity.Entities.Usuario", null)
+                    b.HasOne("HostGallery.Domain.Entities.Usuario", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -460,7 +471,7 @@ namespace HostGallery.Infrastructure.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("HostGallery.Infrastructure.Identity.Entities.Usuario", null)
+                    b.HasOne("HostGallery.Domain.Entities.Usuario", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -475,7 +486,7 @@ namespace HostGallery.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("HostGallery.Infrastructure.Identity.Entities.Usuario", null)
+                    b.HasOne("HostGallery.Domain.Entities.Usuario", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -484,7 +495,7 @@ namespace HostGallery.Infrastructure.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("HostGallery.Infrastructure.Identity.Entities.Usuario", null)
+                    b.HasOne("HostGallery.Domain.Entities.Usuario", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -499,13 +510,15 @@ namespace HostGallery.Infrastructure.Migrations
             modelBuilder.Entity("HostGallery.Domain.Entities.Evento", b =>
                 {
                     b.Navigation("Categorias");
+
+                    b.Navigation("EventosUsuarios");
                 });
 
-            modelBuilder.Entity("HostGallery.Infrastructure.Identity.Entities.Usuario", b =>
+            modelBuilder.Entity("HostGallery.Domain.Entities.Usuario", b =>
                 {
                     b.Navigation("Categorias");
 
-                    b.Navigation("Eventos");
+                    b.Navigation("EventosUsuarios");
 
                     b.Navigation("Itens");
                 });

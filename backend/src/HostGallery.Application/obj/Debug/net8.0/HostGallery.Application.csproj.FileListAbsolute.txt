@@ -29,3 +29,5 @@ C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\obj\Debug\ne
 C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\obj\Debug\net8.0\refint\HostGallery.Application.dll
 C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\obj\Debug\net8.0\HostGallery.Application.pdb
 C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\obj\Debug\net8.0\ref\HostGallery.Application.dll
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\bin\Debug\net8.0\HostGallery.Infrastructure.dll
+C:\Users\PC\Desktop\HostGallery\backend\src\HostGallery.Application\bin\Debug\net8.0\HostGallery.Infrastructure.pdb

@@ -1,8 +1,8 @@
-﻿using HostGallery.Infrastructure.Identity.Dtos;
-using HostGallery.Infrastructure.Identity.Intefaces;
+﻿using HostGallery.Application.Identity.Dtos;
+using HostGallery.Application.Identity.Intefaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HostGallery.WebAPI.Controllers; 
+namespace HostGallery.WebAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

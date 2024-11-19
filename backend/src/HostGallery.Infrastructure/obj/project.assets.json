@@ -1603,6 +1603,10 @@
       "HostGallery.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity": "2.2.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.8"
+        },
         "compile": {
           "bin/placeholder/HostGallery.Domain.dll": {}
         },
