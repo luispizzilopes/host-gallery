@@ -15,6 +15,7 @@ using HostGallery.Domain.Entities;
 using HostGallery.Application.Identity.Dtos;
 using HostGallery.Application.Identity.Exceptions;
 using HostGallery.Application.Identity.Intefaces;
+using HostGallery.Application.Consts;
 
 namespace HostGallery.Infrastructure.Identity.Services
 {
@@ -186,8 +187,8 @@ namespace HostGallery.Infrastructure.Identity.Services
         {
             return new[]
             {
-                new Claim(JwtRegisteredClaimNames.UniqueName, usuario.UserName!),
-                new Claim(JwtRegisteredClaimNames.NameId, usuario.Id)
+                new Claim(HostGalleryClaimsNames.NomeUsuario, usuario.UserName!),
+                new Claim(HostGalleryClaimsNames.IdUsuario, usuario.Id)
             };
         }
 

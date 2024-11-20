@@ -42,7 +42,7 @@ public class ItemService : IItemService
         var entidade = _mapper.Map<Item>(item);
 
         entidade.IpCriacao = _httpContextAccessor.HttpContext?.Request.Headers["IpCliente"].FirstOrDefault();
-        entidade.DataCriacao = DateTimeOffset.Now;
+        entidade.DataCriacao = DateTime.UtcNow;
 
         return _mapper.Map<ItemDTO>(await _repositoryItem.AdicionarItem(entidade));
     }
@@ -52,7 +52,7 @@ public class ItemService : IItemService
         var entidade = _mapper.Map<Item>(item);
 
         entidade.IpAtualizacao = _httpContextAccessor.HttpContext?.Request.Headers["IpCliente"].FirstOrDefault();
-        entidade.DataAtualizacao = DateTimeOffset.Now;
+        entidade.DataAtualizacao = DateTime.UtcNow;
 
         return _mapper.Map<ItemDTO>(await _repositoryItem.AtualizarItem(entidade));
     }

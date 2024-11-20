@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HostGallery.Application.Consts;
 using HostGallery.Application.Dtos.Evento;
 using HostGallery.Application.Interfaces;
 using HostGallery.Application.Utils;
@@ -32,7 +33,7 @@ public class EventoService : IEventoService
 
     public async Task<ResultadoPaginado<EventoDTO>> BuscarEventos(ParametrosPaginacao parametrosPaginacao)
     {
-        var usuarioId = _httpContextAccessor.HttpContext?.User.FindFirst(JwtRegisteredClaimNames.NameId)?.Value;
+        var usuarioId = _httpContextAccessor.HttpContext?.User.FindFirst(HostGalleryClaimsNames.IdUsuario)?.Value;
         if (usuarioId == null) return new ResultadoPaginado<EventoDTO>();
 
         var paginacaoResultado = await _repositoryEvento.BuscarEventosUsuario(usuarioId, parametrosPaginacao);
@@ -46,7 +47,7 @@ public class EventoService : IEventoService
         var entidade = _mapper.Map<Evento>(evento);
 
         entidade.IpCriacao = _httpContextAccessor.HttpContext?.Request.Headers["IpCliente"].FirstOrDefault();
-        entidade.DataCriacao = DateTimeOffset.UtcNow;
+        entidade.DataCriacao = DateTime.UtcNow;
         entidade.CodigoConvite = Guid.NewGuid();
 
         return _mapper.Map<EventoDTO>(await _repositoryEvento.AdicionarEvento(entidade)); 
@@ -57,7 +58,7 @@ public class EventoService : IEventoService
         var entidade = _mapper.Map<Evento>(evento);
 
         entidade.IpAtualizacao = _httpContextAccessor.HttpContext?.Request.Headers["IpCliente"].FirstOrDefault();
-        entidade.DataAtualizacao = DateTimeOffset.UtcNow;
+        entidade.DataAtualizacao = DateTime.UtcNow;
 
         return _mapper.Map<EventoDTO>(await _repositoryEvento.AtualizarEvento(entidade));
     }

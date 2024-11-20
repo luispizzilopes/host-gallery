@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HostGallery.Application.Consts;
 using HostGallery.Application.Dtos.Categoria;
 using HostGallery.Application.Interfaces;
 using HostGallery.Application.Utils;
@@ -6,6 +7,7 @@ using HostGallery.Domain.Common;
 using HostGallery.Domain.Entities;
 using HostGallery.Domain.Interfaces;
 using Microsoft.AspNetCore.Http;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace HostGallery.Application.Services;
 
@@ -25,7 +27,6 @@ public class CategoriaService : ICategoriaService
     public async Task<CategoriaDTO> BuscarCategoria(int id)
     {
         var entidade = await _repositoryCategoria.BuscarCategoria(id);
-
         return _mapper.Map<CategoriaDTO>(entidade); 
     }
 
@@ -40,9 +41,11 @@ public class CategoriaService : ICategoriaService
     public async Task<CategoriaDTO> AdicionarCategoria(CategoriaDTO categoria)
     {
         var entidade = _mapper.Map<Categoria>(categoria);
+        var usuarioId = _httpContextAccessor.HttpContext?.User.FindFirst(HostGalleryClaimsNames.IdUsuario)?.Value!;
 
         entidade.IpCriacao = _httpContextAccessor.HttpContext?.Request.Headers["IpCliente"].FirstOrDefault();
-        entidade.DataCriacao = DateTimeOffset.Now;
+        entidade.DataCriacao = DateTime.UtcNow;
+        entidade.UsuarioId = usuarioId;
 
         return _mapper.Map<CategoriaDTO>(await _repositoryCategoria.AdicionarCategoria(entidade)); 
     }
@@ -52,7 +55,7 @@ public class CategoriaService : ICategoriaService
         var entidade = _mapper.Map<Categoria>(categoria);
 
         entidade.IpAtualizacao = _httpContextAccessor.HttpContext?.Request.Headers["IpCliente"].FirstOrDefault();
-        entidade.DataAtualizacao = DateTimeOffset.Now;
+        entidade.DataAtualizacao = DateTime.UtcNow;
 
         return _mapper.Map<CategoriaDTO>(await _repositoryCategoria.AtualizarCategoria(entidade));
     }
